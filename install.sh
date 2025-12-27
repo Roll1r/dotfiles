@@ -63,7 +63,7 @@ copy_config "$CONFIG_DIR/.oh-my-zsh" "$HOME/.oh-my-zsh"
 
 echo "🎨 Настройка SDDM..."
 copy_config "$CONFIG_DIR/sddm.conf" "/etc/sddm.conf"
-copy_config "$CONFIG_DIR/sddm-theme" "/usr/share/sddm/themes/"
+copy_config "$CONFIG_DIR/sddm-astronaut-theme" "/usr/share/sddm/themes/"
 
 echo "🌈 Установка темы Dracula..."
 copy_config "$CONFIG_DIR/Dracula" "/usr/share/themes/Dracula"

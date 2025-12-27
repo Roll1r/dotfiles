@@ -1,0 +1,79 @@
+@import url("./colors.css");
+
+window {
+  background: @background-darker;
+  border-radius: 10px;
+  border-style: none;
+  border-width: 1px;
+  border-color: rgba(232, 162, 175, 0); /* Adapted from #E8A2AF */
+}
+
+#box {
+  /* Define attributes of the box surrounding icons here */
+  padding: 10px;
+}
+
+#active {
+  /* This is to underline the button representing the currently active window */
+  border-bottom: solid 5px; /* Adapted from source focused borders */
+  border-color: #ABE9B3;
+}
+
+button, image {
+  background: none;
+  border-style: none;
+  box-shadow: none;
+  color: #B5E8E0;
+}
+
+button {
+  padding: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #B5E8E0;
+  font-size: 15px; /* Adapted from source global font-size */
+}
+
+button:hover {
+  background-color: transparent;
+  border-radius: 2px;
+  border-top: 2px solid #E8A2AF;
+  border-bottom: 2px solid #E8A2AF;
+  color: @yellow;
+}
+
+button:focus {
+  box-shadow: none;
+  color: #ABE9B3;
+  border-top: 2px solid #ABE9B3;
+  border-bottom: 2px solid #ABE9B3;
+}
+
+/* Контекстное меню */
+menu {
+  background: @background;
+  border-radius: 10px;        /* скругление оболочки */
+  border: 1px solid rgba(232, 162, 175, 0.7);
+  padding: 4px;
+}
+
+/* Элементы меню */
+menu menuitem {
+  padding: 4px 10px;
+  color: @cyan;
+  background: none;
+  margin: 2px 0;
+  border-radius: 0;           /* минимальное скругление, иначе зона клика растёт */
+}
+
+/* Hover эффект для элементов меню */
+menu menuitem:hover {
+  background-color: @background-darker; /* мягкий highlight вместо бордеров */
+  color: @cyan;
+}
+
+/* Фокус на элементе меню */
+menu menuitem:focus {
+  box-shadow: none;
+  color: #ABE9B3;
+}

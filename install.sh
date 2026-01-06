@@ -54,14 +54,14 @@ copy_config "$CONFIG_DIR/nvim" "$HOME/.config/nvim"
 copy_config "$CONFIG_DIR/waybar" "$HOME/.config/waybar"
 copy_config "$CONFIG_DIR/waybar_scripts" "$HOME/.config/waybar_scripts"
 copy_config "$CONFIG_DIR/wofi" "$HOME/.config/wofi"
-copy_config "$CONFIG_DIR/.p10k.zsh" "$HOME/.config/.p10k.zsh"
+run cp "$CONFIG_DIR/.p10k.zsh" "$HOME/.config/.p10k.zsh"
 
 echo "🏠 Copying files to \$HOME..."
-copy_config "$CONFIG_DIR/.zshrc" "$HOME/.zshrc"
+run cp "$CONFIG_DIR/.zshrc" "$HOME/.zshrc"
 copy_config "$CONFIG_DIR/OMZSH" "$HOME/.oh-my-zsh"
 
 echo "🎨 Configuring SDDM..."
-copy_config "$CONFIG_DIR/sddm.conf" "/etc/sddm.conf"
+run sudo cp "$CONFIG_DIR/sddm.conf" "/etc/sddm.conf"
 copy_config "$CONFIG_DIR/sddm-astronaut-theme" "/usr/share/sddm/themes/"
 
 echo "🌈 Installing Dracula theme..."
